@@ -1,6 +1,6 @@
 const products = []
 
-for (let i = 0; i < 8000; i++) {
+for (let i = 0; i < 10; i++) {
     let obj = {};
     obj.title = `Product ${i + 1}`
     obj.price = 12.75 + i / 100

@@ -8,21 +8,21 @@ const timeFormat = require('./formatSeconds');
 require('dotenv').config()
 colors.enable();
 
-const start = new Date()
+const start = new Date();
 
-const url = process.env.UPLOAD_URL || 'http://gsarbaj.ddns.net:1337/api/products'
+const url = process.env.UPLOAD_URL || 'http://gsarbaj.ddns.net:1337/api/products';
 
 
 const uploadFunction = (index) => {
-    if(products.length - index > 0){
+    if (products.length - index > 0) {
         console.log(colors.bgBlue.bold(' REMAIN '), colors.blue(products.length - index, 'products left to upload'))
-        console.log(colors.bgBlue.bold(' PASSED ', timeFormat((new Date() - start)/1000)))
+        console.log(colors.bgBlue.bold(' PASSED ', timeFormat((new Date() - start) / 1000)))
         console.log('')
     }
 
     if (index >= products.length) {
         const finish = new Date()
-        console.log(colors.bgGreen.bold("  ", index, 'PRODUCTS SUCCESSFULLY UPLOADED', 'in', timeFormat((finish-start)/1000)))
+        console.log(colors.bgGreen.bold("  ", index, 'PRODUCTS SUCCESSFULLY UPLOADED', 'in', timeFormat((finish - start) / 1000)))
         return
     }
 
