@@ -1,6 +1,6 @@
 const products = []
 
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 5; i++) {
     let obj = {};
     obj.id = 393957342 + i
     obj.product_id = 47563 + i
